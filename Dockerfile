@@ -17,6 +17,3 @@ RUN php5dismod oauth
 COPY help.sh /etc/profile.d/
 
 RUN useradd -m wp && chown -R wp:wp /home/wp
-
-ENTRYPOINT [ "/sbin/my_init", "--", "/sbin/setuser", "wp", "/bin/bash" ]
-CMD [ "-l", "-c", "wpapi" ]
